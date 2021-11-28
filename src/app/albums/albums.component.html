@@ -1,0 +1,14 @@
+<p>albums.component.html</p>
+
+<table border="1">
+    <tr>
+        <td>userId</td>
+        <td>id</td>
+        <td>title</td>
+    </tr>
+    <tr *ngFor="let album of albums">
+        <td>{{album.userId}}</td>
+        <td>{{album.id}}</td>
+        <td>{{album.title}}</td>     
+    </tr>
+</table>

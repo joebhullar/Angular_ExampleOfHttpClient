@@ -1,0 +1,14 @@
+<p>albums-observable works!</p>
+
+<table border="1">
+    <tr>
+        <td>userId</td>
+        <td>id</td>
+        <td>title</td>
+    </tr>
+    <tr *ngFor="let album of albumsObservable">
+        <td>{{album.userId}}</td>
+        <td>{{album.id}}</td>
+        <td>{{album.title}}</td>     
+    </tr>
+</table>

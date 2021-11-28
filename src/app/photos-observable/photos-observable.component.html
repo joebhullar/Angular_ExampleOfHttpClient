@@ -1,0 +1,17 @@
+<p>photos-observable works!</p>
+<table border="1">
+    <tr>
+        <td>AlbumId</td>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Url</td>
+        <td>Thumbnail</td>
+    </tr>
+    <tr *ngFor="let photo of photos">
+        <td>{{photo.albumId}}</td>
+        <td>{{photo.id}}</td>
+        <td>{{photo.title}}</td>
+        <td>{{photo.url}}</td>
+        <td><img style="display:block;" width="100%" height="100%" src={{photo.thumbnailUrl}} /></td>       
+    </tr>
+</table>

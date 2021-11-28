@@ -1,0 +1,75 @@
+<p>users.component.html</p>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>Suit</th>
+        <th>City</th>
+
+    </tr>
+    <tr *ngFor="let user of users">    
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.street}}</td>
+        <td>{{user.address.suite}}</td>
+        <td>{{user.address.city}}</td>
+    </tr>
+    
+</table>
+<hr/><br>
+<button (click)="FetchUserDetails()">Fetch User Details</button>
+<br><br>
+<table border="1" *ngIf="showHeader">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>Suit</th>
+        <th>City</th>
+
+    </tr>
+    <tr *ngFor="let user of users">    
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.street}}</td>
+        <td>{{user.address.suite}}</td>
+        <td>{{user.address.city}}</td>
+    </tr>
+    
+</table>
+<hr/><br>
+<input type="text" [(ngModel)]="id">
+<button (click)="FetchUserById(id)">Fetch User ID Details</button>
+<br><br>
+<table border="1" *ngIf="showHeaderById">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>Suit</th>
+        <th>City</th>
+
+    </tr>
+    <tr *ngFor="let user of userFetchById">    
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.street}}</td>
+        <td>{{user.address.suite}}</td>
+        <td>{{user.address.city}}</td>
+    </tr>
+    
+</table>

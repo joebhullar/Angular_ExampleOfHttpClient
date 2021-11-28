@@ -1,0 +1,16 @@
+<p>to-dos.component.html</p>
+
+<table border="1">
+    <tr> 
+        <td>User Id</td>
+        <td>Id</td>
+        <td>Title Of ToDo Task</td>
+        <td>Completed</td>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        <td>{{todo.userId}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>  
+    </tr>
+</table>
